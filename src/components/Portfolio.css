@@ -1,0 +1,154 @@
+/* Global Container */
+.portfolio-container {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  font-family: 'Roboto', sans-serif;
+  background-color: transparent; 
+  color: #fff;
+}
+
+/* Section */
+.portfolio-section {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Section Title */
+.portfolio-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.portfolio-title::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: #fff;
+  margin: 10px auto 0;
+  transition: width 0.3s ease;
+}
+
+.portfolio-title:hover::after {
+  width: 80%;
+}
+
+/* Content Section */
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .portfolio-content {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+/* Video Section */
+.portfolio-video {
+  flex: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-video:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-video iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .portfolio-video iframe {
+    height: 350px;
+  }
+}
+
+/* Description Section */
+.portfolio-description {
+  flex: 1;
+  max-width: 600px;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  color: #ddd;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .portfolio-description {
+    margin-left: 30px;
+  }
+}
+
+/* Projects Section */
+.projects-section {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.projects-section:hover {
+  transform: scale(1.03);
+}
+
+.projects-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.projects-description {
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  font-weight: 300;
+  animation: fadeIn 3s infinite;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-title {
+    font-size: 2.5rem;
+  }
+
+  .portfolio-description {
+    font-size: 1rem;
+  }
+}
