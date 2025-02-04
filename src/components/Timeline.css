@@ -17,7 +17,6 @@
   height: 3px;
   background-color: #e0e0e0; /* color of the horizontal line */
   z-index: 0; /* ensure the line is behind the items */
-  shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-item {
@@ -42,10 +41,6 @@
   font-size: 2.5em;
 }
 
-.timeline-icon:hover {
-  transform: scale(1.10);
-}
-
 .timeline-date {
   font-size: 20px;
   font-weight: bold;
@@ -56,16 +51,12 @@
 }
 
 .timeline-content {
-  background: rgba(255, 255, 255, 0.8);
+  background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
   flex-grow: 1;
   max-width: 293px;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .timeline-title {
