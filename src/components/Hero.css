@@ -1,0 +1,344 @@
+/* General Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    color: white;
+    margin-left: 100px;
+
+}
+
+/* logo content */
+.header-logo-hamburger {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-icon svg {
+    font-size: 24px;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    text-align: left;
+    animation: fadeInUp 1.5s ease-out;
+    position: relative;
+
+    background-blend-mode: overlay;
+}
+
+/* Hero content (text and image container) */
+.hero-content {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+/* text section*/
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 40%;
+    margin-right: 10%;
+    margin-left: 10%;
+    animation: fadeInText 1.5s ease-out;
+}
+
+/*text animation */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: -70px;
+    color: white;
+}
+
+.hero-name {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;/
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.purple-text {
+    color: #8a2be2;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+
+
+.hero-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: justify;
+    animation: fadeInText 1.5s ease-out;
+}
+
+/* Buttons */
+.hero-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.hero-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image */
+.profile-photo {
+    max-width: 25vw;
+    height: 350px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* style for spotify button */
+.hero-spotify-buttons a {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #7569BF;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+    width: 25vw;
+    text-align: center;
+}
+
+/* button hover */
+.hero-spotify-buttons a:hover {
+    background-color: #6a1b9a;
+}
+
+
+
+.hero-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #7569BF;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+    animation: fadeInText 1.5s ease-out;
+}
+
+.hero-button:hover {
+    background-color: #6a1b9a;
+}
+
+/* social media icons */
+.social-links {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+    opacity: 1;
+}
+
+/* icon styles */
+.social-icon {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s;
+    opacity: 0;
+    animation: fadeInIcons 1.5s ease-out forwards;
+}
+
+/*icon hover*/
+.social-icon:hover {
+    color: #8a2be2;
+}
+
+@keyframes fadeInIcons {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+       
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-image {
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 25vw;
+    height: 25vw;
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    opacity: 0.3;
+    animation: fadeInImage 1.5s ease-out forwards;
+    margin-top: -60px;
+}
+
+/* pic animation */
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%) scale(0.8);
+    }
+
+    to {
+        opacity: 0.9;
+        transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+}
+
+@keyframes fadeInIcons {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hero-text {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-name {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+
+    .hero-buttons {
+        margin-bottom: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-button {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .profile-photo {
+        width: 80%;
+        height: auto;
+        border-radius: 20%;
+        margin-bottom: 20px;
+    }
+
+    .hero-spotify-buttons a {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .social-links {
+        position: static;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icon {
+        font-size: 20px;
+    }
+
+    .hero-image {
+        display: none;
+    }
+}
