@@ -14,6 +14,15 @@ import "./App.css";
 
 function App() {
   useEffect(() => {
+
+    document.body.style.minWidth = "1200px"; // Fuerza el ancho mínimo para que se vea como escritorio en móviles
+    document.body.style.overflowX = "auto"; // Permite desplazamiento horizontal si la pantalla es más pequeña
+    
+    const meta = document.querySelector("meta[name=viewport]");
+    if (meta) {
+      meta.setAttribute("content", "width=1200, user-scalable=no"); // Fuerza la escala de escritorio en móviles
+    }
+
     const circle = document.createElement("div");
     circle.className = "cursor-circle";
     document.body.appendChild(circle);

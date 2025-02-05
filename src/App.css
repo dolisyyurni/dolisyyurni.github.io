@@ -36,38 +36,6 @@ body {
   background: transparent; 
 }
 
-@media (max-width: 1024px) {
-  .hero-title {
-      font-size: 7vw; 
-  }
-
-  .hero-description {
-      font-size: 16px; 
-  }
-
-  .profile-photo {
-      max-width: 50vw; 
-      height: 300px; 
-  }
-
-}
-
-@media (max-width: 767px) {
-  .hero-title {
-      font-size: 10vw;
-  }
-
-  .hero-description {
-      font-size: 14px; 
-  }
-
-  .profile-photo {
-      max-width: 70vw; 
-      height: 250px;
-  }
-
-
-}
 .gradient-effect {
   width: 100%;
   height: 100vh; 
@@ -136,4 +104,24 @@ body {
 
 .hero, .home, .portfolio {
   z-index: 3;
+}
+
+@media (max-width: 1024px) {
+  html, body {
+    min-width: 1200px;
+    overflow-x: scroll; /* Permite desplazamiento horizontal */
+  }
+
+  .hero-title {
+    font-size: 3rem; /* Tamaño fijo */
+  }
+
+  .hero-description {
+    font-size: 1.2rem; /* Tamaño fijo */
+  }
+
+  .profile-photo {
+    width: 400px;
+    height: 400px;
+  }
 }
